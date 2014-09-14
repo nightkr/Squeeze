@@ -1,6 +1,13 @@
 apply plugin: 'groovy'
+apply plugin: 'idea'
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
+}
+
+idea {
+    module {
+        excludeDirs += file('buildSrc')
+    }
 }
